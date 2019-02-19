@@ -50,6 +50,20 @@
     -moz-border-radius: 10px ;
     -webkit-border-radius: 10px ;
   }
+    
+     
+    .column {
+      float: left;
+      width: 32%;
+      padding: 5px;
+    }
+
+    /* Clear floats after image containers */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
 
   a:link,a:visited
   {
@@ -65,6 +79,10 @@
     text-align: center;
     font-size: 22px;
   }
+    img{
+        border-width: 0px;
+    }
+    
 
   .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
     box-shadow:
@@ -114,6 +132,26 @@
     padding-bottom:5px;
     padding-top:30px;
   }
+    .normaltext-cfl{
+        width:800px; 
+        margin:0 auto; 
+        text-align:justify; 
+        font-size: 16px;
+    }
+    .table-images tr{
+        width:800px; 
+        margin:0 auto; 
+    }
+    .table-images tr td{
+        white-space: nowrap;
+        width:"100%"
+    }
+    .table-images tr td img{
+        max-width:100%; 
+  max-height:100%;
+  margin:auto;
+  display:block;
+    }
 </style>
 <!-- Start : Google Analytics Code -->
 <script>
@@ -138,24 +176,26 @@
         <center><span style="font-size:36px;font-weight:bold;">Corners for Layout: End-to-End Layout Recovery from 360 Images</span></center><br/>
         <table align=center width=1000px>
           <tr>
-            <td align=center width=250px>
-            <center><span style="font-size:17px"><a href="https://cfernandezlab.github.io/" target="_blank">Clara Fernandez-Labrador*</span></center></td>
+            <td align=center width=260px>
+                <center><span style="font-size:17px"><a href="https://cfernandezlab.github.io/" target="_blank">Clara Fernandez-Labrador *<sup>,1,2</sup></a></span></center></td>
             <td align=center width=150px>
-            <center><span style="font-size:17px"><a href="https://webdiis.unizar.es/~jmfacil/" target="_blank">José M. Fácil*</a></span></center></td>
+            <center><span style="font-size:17px"><a href="https://webdiis.unizar.es/~jmfacil/" target="_blank">José M. Fácil *<sup>,1</sup></a></span></center></td>
             <td align=center width=220px>
-            <center><span style="font-size:17px">Alejandro Perez-Yus</a></span></center></td>
+            <center><span style="font-size:17px">Alejandro Perez-Yus<sup>1</sup></span></center></td>
             <td align=center width=200px>
-            <center><span style="font-size:17px"><a href="http://vibot.cnrs.fr/ceacutedric-demonceaux.html" target="_blank">Cédric Demonceaux</a></span></center></td>
+            <center><span style="font-size:17px"><a href="http://vibot.cnrs.fr/ceacutedric-demonceaux.html" target="_blank">Cédric Demonceaux<sup>2</sup></a></span></center></td>
             <td align=center width=150px>
-            <center><span style="font-size:17px"><a href="https://webdiis.unizar.es/~jcivera/" target="_blank">Javier Civera</a></span></center></td>
+            <center><span style="font-size:17px"><a href="https://webdiis.unizar.es/~jcivera/" target="_blank">Javier Civera<sup>1</sup></a></span></center></td>
             <td align=center width=150px>
-            <center><span style="font-size:17px"><a href="http://webdiis.unizar.es/~jguerrer/" target="_blank">José J. Guerrero</a></span></center></td> 
+            <center><span style="font-size:17px"><a href="http://webdiis.unizar.es/~jguerrer/" target="_blank">José J. Guerrero<sup>1</sup></a></span></center></td> 
           </tr>
          </table>
          
         <table align=center width=600px style="padding-top:0px;padding-bottom:20px">
           <tr>
-            <td align=center width=600px><center><span style="font-size:22px">University of Zaragoza, Spain</span></center></td>
+            <td align=center width=600px><center><span style="font-size:15px">* Equal contribution</span></center></td>
+            <td align=center width=600px><center><span style="font-size:15px"><sup>1</sup> University of Zaragoza</span></center></td>
+            <td align=center width=1100px><center><span style="font-size:15px"><sup>2</sup> Université Bourgogne Franche-Comté </span></center></td>
           </tr>
           <!--<tr>
             <td align=center width=600px><center><span style="font-size:16px">* equal contribution</span></center></td>
@@ -171,20 +211,22 @@
           <tr>
             <td align=center width=100px><center><span style="font-size:18px"><a href="">[Paper]</a></span></center></td>
             <td align=center width=100px><center><span style="font-size:18px"><a href='#download-dataset'>[Dataset]</a></span></center></td>
+            <td align=center width=100px><center><span style="font-size:18px"><a href='#sourceCode'>[Code]</a></span></center></td>
             </tr>
         </table><br/>
 
         <table align=center width=1000px>
           <tr><td width=100px>
-            <center><a href="../imgs/introCFL.png" style="margin-right:30px"><img src = "../imgs/introCFL.png" height="300px" border="1" style="border-color:black"></a>
+            <center><a href="../imgs/introCFL.png" style="margin-right:1px;margin-left: 55px"><img src = "../imgs/introCFL.png" height="300px" border="1" style="border-color:black"></a>
             <br></center>
           </td></tr>
         </table>
 
         <br>
 
-        <div style="width:800px; margin:0 auto; text-align=center">
-            Description
+        <div id="abstract" class="normaltext-cfl" style="">
+            The problem of 3D layout recovery in indoor scenes has been a core research topic for over a decade. However, there are still several major challenges that remain unsolved. Among the most relevant ones, a major part of the state-of-the-art methods make implicit or explicit assumptions on the scenes --<i>e.g.</i> box-shaped or Manhattan layouts. Also, current methods are computationally expensive and not suitable for real-time applications like robot navigation and AR/VR.
+In this work we present CFL (Corners for Layout), the first end-to-end model for 3D layout recovery on 360º images. Our experimental results show that we outperform the state of the art relaxing assumptions about the scene and at a lower cost. We also show that our model generalizes better to camera position variations than conventional approaches by using EquiConvs, a novel type of convolution applied directly on the sphere projection and hence invariant to the equirectangular distortions.
 <br><br>
             
             
@@ -195,90 +237,64 @@
       <hr>
 
         <center id="download-dataset"><h1>SUN360 Dataset for Layout Recovery</h1></center>
-        <div style="width:800px; margin:0 auto; text-align=center">
+        <div class="normaltext-cfl" style="">
         
         <br>
-        This dataset has been used by other research groups for Layout Recovery, for example <a href="">. 
+            In this work we use ∼500 panoramas from the SUN360 dataset that were labeled by <a href="https://link.springer.com/chapter/10.1007/978-3-319-10599-4_43" target="_blank">Zhang <i>et al.</i></a>. Since all panoramas were labeled as box-type rooms, we hand-label and substitute some of them representing more faithfully the actual shapes of the rooms. We do line thickening and Gaussian blur for easier convergence during training since it makes the loss progression continuous instead of binary. In the figure below we show an example. 
+        <br><br>
         
-        </div>
         
-        <table align=center width=1000px>
-          <tr><td width=100px><center>
-            <a href="../imgs/" style="margin-right:30px"><img src="../imgs/" height="500px" border="1" style="border-color:black"></a></center>
-            <br>
-          </td></tr>
-        </table>
-        <div style="width:800px; margin:0 auto; text-align=center">
-        This figure illustrates 
-            <br><br>
-       
-        </div>
-       <table align=center width=1000px>
-          <tr><td width=100px><center>
-            <a href="../imgs/" style="margin-right:30px"><img src="../imgs/" height="200px" border="1" style="border-color:black"></a></center>
-            <br>
-          </td></tr>
-        </table>
-      <div style="width:800px; margin:0 auto; text-align=center">
-        
-
-        
-        </div>
-        <table align=center width=900px>
+        <table align=center width=800px>
         <tr>
           <!-- <p style="margin-top:4px;"></p> -->
           <td width=300px align=center>
-            <span style="font-size:28px"><a href='LINK HERE'>[Download Dataset]</a></span>
+            <span style="font-size:18px"><a href='LINK HERE'>[Download Dataset]</a></span>
           </td>
-            </tr><tr>
-            <td width=300px align=center>
-            <img src="../imgs/" height="19px" style="border-style: none">** 
-          </td>
-        </tr>
         </table>
+        
+        <br>
+        
+      </div>
+      
+        <div class="row">
+            <div class="column">
+                <img src="../imgs/pano_ajjyfrdhqyllgb.jpg" alt="Snow" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="../imgs/pano_ajjyfrdhqyllgb_EM.jpg" alt="Forest" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="../imgs/pano_ajjyfrdhqyllgb_CM.jpg" alt="Mountains" style="width:100%">
+            </div>
+        </div>       
+      <br>
       <hr>
 
       
 
         <center id="sourceCode"><h1>Source Code</h1></center>
-        <table align=center width=1000px>
-          <tr><td width=100px><center>
-            <a href="../imgs/" style="margin-right:30px"><img src="../imgs/" height="100px" border="0" style="border-color:black"></a>
-              <br>
-            <a href="../imgs/" style="margin-right:30px"><img src="../imgs/" height="100px" border="0" style="border-color:black"></a>
-              </center>
-            <br>
-          </td></tr>
-        </table>
-        <div style="width:800px; margin:0 auto; text-align=center">
-        We have released the TensorFlow based implementation on the github page. Try our code!
+
+         <div class="normaltext-cfl" style="">
+        We have released the TensorFlow based implementation on our github page. Try our code!
         </div>
+      <br>
         <table align=center width=900px>
         <tr>
           <!-- <p style="margin-top:4px;"></p> -->
           <td width=300px align=center>
-            <span style="font-size:28px"><a href='LINK GITHUB'>[GitHub]</a></span>
+            <span style="font-size:18px"><a href='LINK GITHUB'>[GitHub]</a></span>
           </td>
         </tr>
         </table>
-        <table align=center width=1000px>
-          <tr><td width=100px><center>
-            <a href="../imgs/" style="margin-right:30px"><img src="../imgs/" height="200px" border="0" style="border-color:black"></a></center>
-            <br>
-          </td></tr>
-        </table>
-      <br>
-      <hr>
-
-        
 
       <br>
       <hr>
+
+
         <table align=center width=850px>
           <center><h1>Paper and Bibtex</h1></center>
-          <tr>
+          <!-- <tr>
           <td width=250px align=left>
-          <!-- <p style="margin-top:4px;"></p> -->
               <a href=""><img style="height:150px" src="../imgs/"></a>
           <center>
               <span style="font-size:20pt"><a href="LINK">[Paper]</a></span>
@@ -288,12 +304,10 @@
           <td width=50px align=center>
           </td>
           <td width=550px align=left>
-          <!-- <p style="margin-top:4px;"></p> -->
-          <p style="text-align:left;"><b><span style="font-size:20pt">Citation</span></b><br/><span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt"></i>.</span></p>
-          <!-- <p style="margin-top:20px;"></p> -->
+          <p style="text-align:left;"><b><span style="font-size:20pt">Citation</span></b><br/><span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">.</span></p>
           <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('ppniv18_bib')" class="togglebib">[Bibtex]</a></span>
           </td>
-          </tr>
+          </tr> 
           <tr>
           <td width=250px align=left>
           </td>
@@ -301,23 +315,17 @@
           </td>
           <td width=550px align=left>
             <div class="paper" id="ppniv18_bib">
-<pre xml:space="preserve">
 
             </div>
             </td>
-            </tr>
+            </tr>-->
         </table>
 
       <br>
-      <hr>
 
 
-      <table align=center width=800px>
-        <tr><td width=800px><left>
-        <center><h1>Acknowledgements</h1></center>
-        The authors are with the I3A, Universidad de Zaragoza, Spain. 
-        </left></td></tr>
-      </table>
+
+
     <br><br>
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
