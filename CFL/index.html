@@ -9,7 +9,7 @@
   body {
     font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight:300;
-    font-size:18px;
+    font-size:17px;
     margin-left: auto;
     margin-right: auto;
     width: 1100px;
@@ -54,14 +54,14 @@
 
     .column2 {
       float: left;
-      width: 45%;
-      padding: 20px;
+      width: 40%;
+      padding: 15px;
     }
     
     .column {
       float: left;
       width: 32%;
-      padding: 5px;
+      padding: 3px;
     }
 
     /* Clear floats after image containers */
@@ -142,7 +142,7 @@
         width:800px; 
         margin:0 auto; 
         text-align:justify; 
-        font-size: 16px;
+        font-size: 15px;
     }
     .table-images tr{
         width:800px; 
@@ -181,21 +181,21 @@
 
   <body>
         <br>
-        <center><span style="font-size:36px;font-weight:bold;">Corners for Layout: End-to-End Layout Recovery from 360 Images</span></center><br/>
+        <center><span style="font-size:33px;font-weight:bold;">Corners for Layout: End-to-End Layout Recovery from 360 Images</span></center><br/>
         <table align=center width=1000px>
           <tr>
             <td align=center width=260px>
-                <center><span style="font-size:17px"><a href="https://cfernandezlab.github.io/" target="_blank">Clara Fernandez-Labrador *<sup>,1,2</sup></a></span></center></td>
+                <center><span style="font-size:16px"><a href="https://cfernandezlab.github.io/" target="_blank">Clara Fernandez-Labrador *<sup>,1,2</sup></a></span></center></td>
             <td align=center width=150px>
-            <center><span style="font-size:17px"><a href="https://webdiis.unizar.es/~jmfacil/" target="_blank">José M. Fácil *<sup>,1</sup></a></span></center></td>
+            <center><span style="font-size:16px"><a href="https://webdiis.unizar.es/~jmfacil/" target="_blank">José M. Fácil *<sup>,1</sup></a></span></center></td>
             <td align=center width=220px>
-            <center><span style="font-size:17px">Alejandro Perez-Yus<sup>1</sup></span></center></td>
+            <center><span style="font-size:16px">Alejandro Perez-Yus<sup>1</sup></span></center></td>
             <td align=center width=200px>
-            <center><span style="font-size:17px"><a href="http://vibot.cnrs.fr/ceacutedric-demonceaux.html" target="_blank">Cédric Demonceaux<sup>2</sup></a></span></center></td>
+            <center><span style="font-size:16px"><a href="http://vibot.cnrs.fr/ceacutedric-demonceaux.html" target="_blank">Cédric Demonceaux<sup>2</sup></a></span></center></td>
             <td align=center width=150px>
-            <center><span style="font-size:17px"><a href="https://webdiis.unizar.es/~jcivera/" target="_blank">Javier Civera<sup>1</sup></a></span></center></td>
+            <center><span style="font-size:16px"><a href="https://webdiis.unizar.es/~jcivera/" target="_blank">Javier Civera<sup>1</sup></a></span></center></td>
             <td align=center width=150px>
-            <center><span style="font-size:17px"><a href="http://webdiis.unizar.es/~jguerrer/" target="_blank">José J. Guerrero<sup>1</sup></a></span></center></td> 
+            <center><span style="font-size:16px"><a href="http://webdiis.unizar.es/~jguerrer/" target="_blank">José J. Guerrero<sup>1</sup></a></span></center></td> 
           </tr>
          </table>
          
@@ -217,31 +217,27 @@
         </table>-->
         <table align=center width=250px>
           <tr>
-            <td align=center width=100px><center><span style="font-size:18px"><a href="https://arxiv.org/abs/1903.08094">[Paper]</a></span></center></td>
-            <td align=center width=100px><center><span style="font-size:18px"><a href='#download-dataset'>[Dataset]</a></span></center></td>
-            <td align=center width=100px><center><span style="font-size:18px"><a href='#sourceCode'>[Code]</a></span></center></td>
+            <td align=center width=100px><center><span style="font-size:17px"><a href="https://arxiv.org/abs/1903.08094">[Paper]</a></span></center></td>
+            <td align=center width=100px><center><span style="font-size:17px"><a href='#download-dataset'>[Dataset]</a></span></center></td>
+            <td align=center width=100px><center><span style="font-size:17px"><a href='#sourceCode'>[Code]</a></span></center></td>
             </tr>
-        </table><br/>
+        </table>
 
         <table align=center width=1000px>
           <tr><td width=100px>
-            <center><a href="../imgs/introCFL.png" style="margin-right:1px;margin-left: 55px"><img src = "../imgs/introCFL.png" height="300px" border="1" style="border-color:black"></a>
-            <br></center>
+            <center><a href="../imgs/introCFL.png" style="margin-right:1px;margin-left: 55px"><img src = "../imgs/introCFL.png" height="270px" border="1" style="border-color:black"></a>
+          </center>
           </td></tr>
         </table>
-
-        <br>
 
         <div id="abstract" class="normaltext-cfl" style="">
             The problem of 3D layout recovery in indoor scenes has been a core research topic for over a decade. However, there are still several major challenges that remain unsolved. Among the most relevant ones, a major part of the state-of-the-art methods make implicit or explicit assumptions on the scenes --<i>e.g.</i> box-shaped or Manhattan layouts. Also, current methods are computationally expensive and not suitable for real-time applications like robot navigation and AR/VR.
 In this work we present CFL (Corners for Layout), the first end-to-end model for 3D layout recovery on 360º images. Our experimental results show that we outperform the state of the art relaxing assumptions about the scene and at a lower cost. We also show that our model generalizes better to camera position variations than conventional approaches by using EquiConvs, a novel type of convolution applied directly on the sphere projection and hence invariant to the equirectangular distortions.
-<br><br>
-            
-            
-           
+
+
       </div>
-      <br>
-      <br>
+
+
       <hr>
 
         <center id="download-dataset"><h1>SUN360 Dataset for Layout Recovery</h1></center>
@@ -266,13 +262,13 @@ In this work we present CFL (Corners for Layout), the first end-to-end model for
       
         <div class="row">
             <div class="column">
-                <img src="../imgs/pano_ajjyfrdhqyllgb.jpg" alt="Snow" style="width:100%">
+                <img src="../imgs/pano_ajjyfrdhqyllgb.jpg" alt="Snow" style="width:95%">
             </div>
             <div class="column">
-                <img src="../imgs/pano_ajjyfrdhqyllgb_EM.jpg" alt="Forest" style="width:100%">
+                <img src="../imgs/pano_ajjyfrdhqyllgb_EM.jpg" alt="Forest" style="width:95%">
             </div>
             <div class="column">
-                <img src="../imgs/pano_ajjyfrdhqyllgb_CM.jpg" alt="Mountains" style="width:100%">
+                <img src="../imgs/pano_ajjyfrdhqyllgb_CM.jpg" alt="Mountains" style="width:95%">
             </div>
         </div>       
       <br>
