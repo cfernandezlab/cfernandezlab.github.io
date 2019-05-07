@@ -328,7 +328,14 @@ In this work we present CFL (Corners for Layout), the first end-to-end model for
             </td></tr>
             </table>
           </td>
-       
+          
+          <br>     
+          The aim of this video is to show, for each tested panorama, the predictions obtained through our two CFL models, StdConvs and EquiConvs, when each panorama is rotated from 0°to 360° 
+
+With EquiConvs, we do not use padding when the kernel reaches the border of the image since offsets take the points to their correct position on the other side of the 360 image. This allows the model to understand the continuity of the scene producing much more consistent predictions along all the performed rotations. 
+StdConvs, instead, by using zero-padding, lose this consistency. As a consequence, in most cases when corners approach the borders, StdConvs predict these corners twice, i.e. at both ends.
+        <br><br>
+          
         </div>
        <br>
       <hr>
